@@ -1,1 +1,18 @@
 
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ColaHeroes cola = new ColaHeroes();
+        cola.agregarHeroe(new Heroe("Paul" , "Alienigena", 10 , 
+                "SuperFuerza" ));
+        cola.agregarHeroe(new Heroe("Pedro" , "Humano", 10 ,
+                "SuperFuerza" ));
+        cola.agregarHeroe(new Heroe("Maria" , "Mutante", 10 ,
+                "SuperFuerza" ));
+
+
+
+    }
+
+}
