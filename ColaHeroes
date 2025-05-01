@@ -1,0 +1,29 @@
+import java.util.*;
+import java.util.PriorityQueue;
+
+public class ColaHeroes {
+    PriorityQueue<Heroe> cola;
+    Queue<String> ColaHeroes= new LinkedList<>();
+
+
+    public ColaHeroes () {
+        cola=new PriorityQueue<>();
+    }
+    public boolean agregarHeroe(Heroe a) {
+        cola.offer(a);
+        return agregarHeroe(a);
+    }
+
+    public void quitarHeroe (Heroe q){
+        cola.poll();
+        System.out.println("Cola despues de quitar: "+cola);
+    }
+
+    public String mostrarCola () {
+        StringBuilder mc = new StringBuilder();
+        for (Heroe h : cola) mc.append(h.toString()).append("\n");
+        return mc.toString();
+    }
+
+
+}
