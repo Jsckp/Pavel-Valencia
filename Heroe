@@ -1,0 +1,46 @@
+import java.util.*;
+import java.util.PriorityQueue;
+
+public class Heroe {
+    private String nombre;
+    private String raza;
+    private int nivelPoder;
+    private String habilidad;
+
+    public Heroe() {
+        this.nombre = "Tralalero Tralala";
+        this.raza = "Alienigena";
+        this.nivelPoder = 50;
+        this.habilidad = "Telepatia";
+    }
+
+    public Heroe(String nombre, String raza, int nivelPoder, String habilidad) {
+        this.nombre = nombre;
+        this.raza = raza;
+        this.nivelPoder = nivelPoder;
+        this.habilidad = habilidad;
+    }
+
+    public double PoderRaza() {
+        if (raza.equalsIgnoreCase("Mutante")) {
+            return nivelPoder * 1.3;
+        } else if (raza.equalsIgnoreCase("Humano")) {
+            return nivelPoder;
+        } else if (raza.equalsIgnoreCase("Alienigena")) {
+            return nivelPoder * 1.5;
+        }
+        return nivelPoder;
+    }
+
+    public int compareTo (Heroe otro) {
+        return Integer.compare(otro.nivelPoder , this.nivelPoder);
+    }
+
+    @Override
+    public String toString(){
+        return nombre + "Raza:" + raza + "La Habilidad es:" + habilidad + "El nivel de poder total es:"
+                + nivelPoder;
+    }
+
+}
+
